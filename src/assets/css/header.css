@@ -1,0 +1,217 @@
+.header-top {
+	background-color: #333;
+	color: #FFA500;
+	font-weight: 700;
+	padding: 10px 0;
+}
+.header-main {
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0,0,0,.1);
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+.header-main .container {
+	align-items: center;
+	display: flex;
+}
+.header-catalog {
+	background-color: #fff;
+	border: 1px solid #808080;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 10px 20px;
+	position: relative;
+	z-index: 5;
+}
+.header-catalog__button-text {
+	font-size: 14px;
+	font-weight: 600;
+	margin-left: 20px;
+	text-transform: uppercase;
+}
+.header-catalog__nav {
+	background-color: #fff;
+	display: none;
+	left: 0;
+	position: absolute;
+	top: 55px;
+	z-index: 4;
+}
+.header-catalog__nav:before {
+	background-color: transparent;
+	content: '';
+	height: 16px;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: -16px;
+}
+.header-catalog__nav.active {
+	display: block;
+}
+.header-catalog__nav ul li {
+	border-left: 3px solid transparent;
+}
+.header-catalog__nav ul li:hover {
+	border-left-color: #FFA500;
+	color: #FFA500;
+}
+.header-catalog__nav ul li a {
+	display: flex;
+	padding: 10px 20px;
+}
+.mobile-actions-list {
+	border-bottom: 1px solid #808080;
+	display: none;
+}
+.mobile-actions-list i {
+	margin-right: 19px;
+}
+.header-catalog__category-img {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 80%;
+	height: 20px;
+	margin-right: 15px;
+	width: 20px;
+}
+.header-catalog__category-name {
+	text-transform: capitalize;
+}
+.header-catalog__category-img.shurupoverty {
+	background-image: url(../images/catalog-icons/shurupoverty.jpg);
+}
+.header-catalog__category-img.dreli {
+	background-image: url(../images/catalog-icons/dreli.jpg);
+}
+.header-catalog__category-img.svarki {
+	background-image: url(../images/catalog-icons/svarki.jpg);
+}
+.header-catalog__dark-block {
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 110px;
+	width: 100vw;
+	z-index: 3;
+}
+.header-catalog__dark-block.active {
+	display: block;
+}
+.header-actions {
+	display: flex;
+	margin-left: auto;
+}
+.header-actions > li {
+	height: 71px;
+	position: relative;
+	width: 71px;
+}
+.header-actions > li > a {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+}
+.header-actions > li:hover > a {
+	background-color: #eee;
+}
+.header-actions > li:hover > a + .header-actions__modal {
+	display: block;
+}
+.header-actions > li > a > i {
+	font-size: 24px;
+}
+.header-actions__modal {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 71px;
+	width: 284px;
+	z-index: 5;
+}
+.header-actions__modal > ul > li {
+	align-items: center;
+	display: flex;
+}
+.header-actions__modal > ul > li > a {
+	align-items: center;
+	color: #FFA500;
+	display: flex;
+	justify-content: flex-start;
+	padding: 7px 10px;
+	width: 100%;
+}
+.header-actions__modal > ul > li > a:hover {
+	background-color: #eee;
+}
+.header-actions-counter {
+	background-color: #FFA500;
+	border-radius: 50%;
+	bottom: 5px;
+	font-size: 12px;
+	height: 25px;
+	line-height: 21px;
+	position: absolute;
+	right: 10px;
+	text-align: center;
+	width: 25px;
+}
+.user-modal {
+	left: 0;
+}
+.user-modal__hello {
+	border-bottom: 1px solid #eee;
+	padding: 10px;
+}
+.user-modal__username {
+	font-weight: 700;
+}
+.comparison-modal > ul > li {
+	position: relative;
+}
+.comparison-modal__button-close {
+	background-color: transparent;
+	border: none;
+	bottom: 0;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 33px;
+}
+.comparison-modal__button-close:hover {
+	color: #FFA500;
+}
+.cart-modal {
+	width: 400px;
+}
+@media (max-width: 767px) {
+	.header-catalog__button-text {
+		display: none;
+	}
+	.header-actions__user, .header-actions__favorite {
+		display: none;
+	}
+	.mobile-actions-list {
+		display: block;
+	}
+	.header-actions > li:hover > a + .header-actions__modal {
+		display: none;
+	}
+}
+@media (max-width: 575px) {
+	.comparison-modal {
+		right: -81px;
+		top: 71px;
+		width: 200px;
+	}
+}

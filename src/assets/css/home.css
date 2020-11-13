@@ -1,0 +1,20 @@
+.home-page p {
+	margin: 7px 0;
+}
+
+.home-page ul {
+	margin-top: -7px;
+	padding-left: 40px;
+}
+
+.home-page ul li {
+	list-style-type: disc;
+}
+
+.home-page span {
+	text-decoration: line-through;
+}
+
+.home-page a {
+	color: #FF4500;
+}
