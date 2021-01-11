@@ -35,8 +35,8 @@
 						<legend>{{filter.name}}</legend>
 						<ul>
 							<li v-for="(option, optionID) in filter.options" :key="optionID">
-								<label for="option.name">{{option.propRu}}</label>
-								<input id="option.name" :type="filter.type" v-model="extraFiltersOptions[option.prop]">
+								<label :for="option.prop">{{option.propRu}}</label>
+								<input :id="option.prop" :type="filter.type" v-model="extraFiltersOptions[option.prop]">
 							</li>
 						</ul>
 					</fieldset>
